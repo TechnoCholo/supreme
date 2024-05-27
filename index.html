@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Página Web</title>
+    <style>
+        /* Estilos globales */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header, footer {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        nav {
+            background-color: #444;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            padding: 0 10px;
+        }
+        nav a:hover {
+            background-color: #555;
+        }
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin: 20px;
+        }
+        /* Estilos del contenido principal */
+        .main-content {
+            flex: 1;
+            margin-right: 20px;
+        }
+        .main-content h2 {
+            color: #333;
+            border-bottom: 2px solid #333;
+            padding-bottom: 5px;
+        }
+        .main-content p {
+            color: #555;
+        }
+        /* Estilos de la barra lateral */
+        aside {
+            flex: 0 0 300px;
+            background-color: #f4f4f4;
+            padding: 20px;
+        }
+        aside h2 {
+            color: #333;
+            border-bottom: 2px solid #333;
+            padding-bottom: 5px;
+        }
+        aside p {
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Mi Página Web</h1>
+    </header>
+
+    <nav>
+        <a href="#">Inicio</a>
+        <a href="#">Acerca de</a>
+        <a href="#">Servicios</a>
+        <a href="#">Contacto</a>
+    </nav>
+
+    <div class="container">
+        <div class="main-content">
+            <h2>Contenido Principal</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget lectus eget lectus pulvinar maximus eu non justo. Cras pulvinar vestibulum dui, nec consectetur risus porta eget.</p>
+            <h2>Otro Título</h2>
+            <p>Nullam tincidunt commodo nunc, id feugiat purus aliquet non. Integer eu ligula lorem. Sed vitae bibendum quam, quis placerat ipsum.</p>
+        </div>
+        <aside>
+            <h2>Información</h2>
+            <p>Esta es la barra lateral donde puedes colocar información adicional sobre tu sitio.</p>
+        </aside>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Mi Página Web</p>
+    </footer>
+
+</body>
+</html>
