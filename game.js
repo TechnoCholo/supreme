@@ -1,8 +1,8 @@
 const canvas = document.getElementById("pongCanvas");
 const ctx = canvas.getContext("2d");
 
-canvas.width = 800;
-canvas.height = 600;
+canvas.width = 1800;
+canvas.height = 2600;
 
 const paddleWidth = 10;
 const paddleHeight = 100;
