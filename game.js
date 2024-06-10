@@ -78,7 +78,7 @@ function update() {
         (ball.x + ballSize > cpuPaddle.x && ball.y > cpuPaddle.y && ball.y < cpuPaddle.y + paddleHeight)
     ) {
         ball.dx *= -1;
-        ball.speed *= 1.1;  // Increase ball speed by 10%
+        ball.speed *= 1.01;  // Increase ball speed by 1%
     }
     
     // check for scoring
