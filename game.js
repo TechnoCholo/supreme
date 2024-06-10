@@ -9,7 +9,7 @@ const paddleHeight = 100;
 const ballSize = 10;
 const playerPaddle = { x: 10, y: canvas.height / 2 - paddleHeight / 2, dy: 0 };
 const cpuPaddle = { x: canvas.width - 20, y: canvas.height / 2 - paddleHeight / 2, dy: 4 };
-const ball = { x: canvas.width / 2, y: canvas.height / 2, dx: 4, dy: 4 };
+let ball = { x: canvas.width / 2, y: canvas.height / 2, dx: 4, dy: 4, speed: 4 };
 
 let playerScore = 0;
 let cpuScore = 0;
@@ -64,8 +64,8 @@ function update() {
     if (cpuPaddle.y + paddleHeight > canvas.height) cpuPaddle.y = canvas.height - paddleHeight;
     
     // update ball position
-    ball.x += ball.dx;
-    ball.y += ball.dy;
+    ball.x += ball.dx * ball.speed;
+    ball.y += ball.dy * ball.speed;
     
     // check for collision with top and bottom walls
     if (ball.y < 0 || ball.y > canvas.height) {
@@ -78,6 +78,7 @@ function update() {
         (ball.x + ballSize > cpuPaddle.x && ball.y > cpuPaddle.y && ball.y < cpuPaddle.y + paddleHeight)
     ) {
         ball.dx *= -1;
+        ball.speed *= 1.1;  // Increase ball speed by 10%
     }
     
     // check for scoring
@@ -96,10 +97,7 @@ function update() {
 }
 
 function resetBall() {
-    ball.x = canvas.width / 2;
-    ball.y = canvas.height / 2;
-    ball.dx = 4 * (Math.random() > 0.5 ? 1 : -1);
-    ball.dy = 4 * (Math.random() > 0.5 ? 1 : -1);
+    ball = { x: canvas.width / 2, y: canvas.height / 2, dx: 4 * (Math.random() > 0.5 ? 1 : -1), dy: 4 * (Math.random() > 0.5 ? 1 : -1), speed: 4 };
 }
 
 function resetGame() {
