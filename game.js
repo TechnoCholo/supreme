@@ -9,7 +9,7 @@ const paddleHeight = 100;
 const ballSize = 10;
 const playerPaddle = { x: 10, y: canvas.height / 2 - paddleHeight / 2, dy: 0 };
 const cpuPaddle = { x: canvas.width - 20, y: canvas.height / 2 - paddleHeight / 2, dy: 4 };
-let ball = { x: canvas.width / 2, y: canvas.height / 2, dx: 4, dy: 4, speed: 4 };
+let ball = { x: canvas.width / 2, y: canvas.height / 2, dx: 4, dy: 4, speed: 1 };
 
 let playerScore = 0;
 let cpuScore = 0;
@@ -78,7 +78,7 @@ function update() {
         (ball.x + ballSize > cpuPaddle.x && ball.y > cpuPaddle.y && ball.y < cpuPaddle.y + paddleHeight)
     ) {
         ball.dx *= -1;
-        ball.speed *= 1.01;  // Increase ball speed by 1%
+        ball.speed *= 1.001;  // Increase ball speed by .1%
     }
     
     // check for scoring
